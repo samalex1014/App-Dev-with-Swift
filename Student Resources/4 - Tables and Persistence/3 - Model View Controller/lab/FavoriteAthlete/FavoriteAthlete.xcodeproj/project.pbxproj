@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A72E6F0421C6F93000665A54 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E6F0321C6F93000665A54 /* Athlete.swift */; };
+		A72E6F0621C6F99D00665A54 /* AthleteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72E6F0521C6F99D00665A54 /* AthleteFormViewController.swift */; };
 		A94375AE1E4648230053B419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94375AD1E4648230053B419 /* AppDelegate.swift */; };
 		A94375B31E4648230053B419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94375B11E4648230053B419 /* Main.storyboard */; };
 		A94375B51E4648230053B419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94375B41E4648230053B419 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A72E6F0321C6F93000665A54 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
+		A72E6F0521C6F99D00665A54 /* AthleteFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteFormViewController.swift; sourceTree = "<group>"; };
 		A94375AA1E4648230053B419 /* FavoriteAthlete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteAthlete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94375AD1E4648230053B419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94375B21E4648230053B419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				A94375AD1E4648230053B419 /* AppDelegate.swift */,
 				A94375B11E4648230053B419 /* Main.storyboard */,
+				A72E6F0321C6F93000665A54 /* Athlete.swift */,
+				A72E6F0521C6F99D00665A54 /* AthleteFormViewController.swift */,
 				A9FE274E1E4A8F0E00F01A14 /* AthleteTableViewController.swift */,
 				A94375B41E4648230053B419 /* Assets.xcassets */,
 				A94375B61E4648230053B419 /* LaunchScreen.storyboard */,
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					A94375A91E4648230053B419 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 36TX7N82LL;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -136,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A72E6F0621C6F99D00665A54 /* AthleteFormViewController.swift in Sources */,
 				A9FE274F1E4A8F0E00F01A14 /* AthleteTableViewController.swift in Sources */,
+				A72E6F0421C6F93000665A54 /* Athlete.swift in Sources */,
 				A94375AE1E4648230053B419 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,10 +283,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36TX7N82LL;
 				INFOPLIST_FILE = FavoriteAthlete/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteAthlete;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samuelsmith.FavoriteAthlete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -288,10 +298,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 36TX7N82LL;
 				INFOPLIST_FILE = FavoriteAthlete/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FavoriteAthlete;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.samuelsmith.FavoriteAthlete;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
