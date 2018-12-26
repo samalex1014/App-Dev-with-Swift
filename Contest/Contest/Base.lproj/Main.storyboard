@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Email Submission View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="EmailSubmissionViewController" customModule="Contest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email to be entered in the contest" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4s-5a-Tmm">
+                                <rect key="frame" x="26" y="50" width="323" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTG-xO-5NO">
+                                <rect key="frame" x="15" y="318.5" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M70-Pp-w1y">
+                                <rect key="frame" x="163" y="378.5" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7o-LP-iP7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZTG-xO-5NO" secondAttribute="trailing" constant="15" id="58B-RK-msF"/>
+                            <constraint firstItem="i4s-5a-Tmm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7A1-ma-kNL"/>
+                            <constraint firstItem="ZTG-xO-5NO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Nh4-Nw-QQH"/>
+                            <constraint firstItem="M70-Pp-w1y" firstAttribute="top" secondItem="ZTG-xO-5NO" secondAttribute="bottom" constant="30" id="PYj-KF-MPo"/>
+                            <constraint firstItem="i4s-5a-Tmm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Rby-Kj-6Dg"/>
+                            <constraint firstItem="M70-Pp-w1y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZAi-Uz-VrF"/>
+                            <constraint firstItem="ZTG-xO-5NO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="h4s-dK-m1A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i4s-5a-Tmm" secondAttribute="trailing" constant="10" id="lPR-l7-kS3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ZTG-xO-5NO" id="nXi-p9-xtU"/>
+                        <segue destination="od1-xg-esm" kind="show" identifier="EmailSubmissionSegue" id="LJA-2P-C49"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xgq-O8-bbW">
+            <objects>
+                <viewController id="od1-xg-esm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Crg-Tz-v9f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! You've been entered into the drawing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faD-A6-F2y">
+                                <rect key="frame" x="15" y="302.5" width="345" height="62.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="faD-A6-F2y" firstAttribute="centerY" secondItem="Crg-Tz-v9f" secondAttribute="centerY" id="8BD-Sq-ZWd"/>
+                            <constraint firstAttribute="trailing" secondItem="faD-A6-F2y" secondAttribute="trailing" constant="15" id="8Ig-2t-Q7j"/>
+                            <constraint firstItem="faD-A6-F2y" firstAttribute="leading" secondItem="Crg-Tz-v9f" secondAttribute="leading" constant="15" id="Qak-Xj-Y8C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GNo-tc-olm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoD-Ot-Lgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988" y="125"/>
+        </scene>
+    </scenes>
+</document>
