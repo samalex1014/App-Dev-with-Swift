@@ -2,13 +2,14 @@
 import UIKit
 
 class StoreItemListTableViewController: UITableViewController {
+    var storeItemController = StoreItemController()
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var filterSegmentedControl: UISegmentedControl!
     
     // add item controller property
     
-    var items = [String]()
+    var items = [StoreItem]()
     
     let queryOptions = ["movie", "music", "software", "ebook"]
     
@@ -28,10 +29,21 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             
             // set up query dictionary
-            
+            let query: [String: String] = ["term":searchTerm, "media":mediaType]
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
+            
+            self.storeItemController.fetchItems(matching: query) { (storeItems) in
+                guard let reses = storeItems else {
+                    print("FATAL ERROR")
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.items = reses
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
     
@@ -39,7 +51,8 @@ class StoreItemListTableViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
-        cell.textLabel?.text = item
+        cell.textLabel?.text = item.trackName
+        cell.detailTextLabel?.text = item.artistName
         
         // set label to the item's name
         // set detail label to the item's subtitle

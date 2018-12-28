@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:iTunesSearch.xcodeproj">
+      location = "group:/Users/smith.10439/Documents/App Dev with Swift/Student Resources/5 - Working With the Web/6 - WWW Concurrency/lab/iTunesSearch/iTunesSearch/StoreItemController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/smith.10439/Documents/App Dev with Swift/Student Resources/5 - Working With the Web/6 - WWW Concurrency/lab/iTunesSearch/iTunesSearch/URL+Helpers.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
